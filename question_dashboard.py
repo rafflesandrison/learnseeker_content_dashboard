@@ -1,4 +1,6 @@
 import json
+import numpy as np
+import pandas as pd
 
 data_breakdown = {
     "MCQ": {
@@ -824,3 +826,32 @@ print(len(uuids_with_issues))
 
 for uuid in uuids_with_issues:
     print(uuid)
+
+
+
+## Primary 1 : Topic Breakdown ##
+
+series_primary_1_topics = data_breakdown["MCQ"]["Primary 1"]["topics"].keys()
+
+series_primary_1_number_of_questions_per_topic = []
+series_primary_1_number_of_questions_per_topic_difficulty_1 = []
+series_primary_1_number_of_questions_per_topic_difficulty_2 = []
+series_primary_1_number_of_questions_per_topic_difficulty_3 = []
+for topic in data_breakdown["MCQ"]["Primary 1"]["topics"].keys():
+    series_primary_1_number_of_questions_per_topic.append(data_breakdown["MCQ"]["Primary 1"]["topics"][topic]["question_count"])
+    series_primary_1_number_of_questions_per_topic_difficulty_1.append(data_breakdown["MCQ"]["Primary 1"]["topics"][topic]["difficulty_1"])
+    series_primary_1_number_of_questions_per_topic_difficulty_2.append(data_breakdown["MCQ"]["Primary 1"]["topics"][topic]["difficulty_2"])
+    series_primary_1_number_of_questions_per_topic_difficulty_3.append(data_breakdown["MCQ"]["Primary 1"]["topics"][topic]["difficulty_3"])
+
+
+df_primary_1 = pd.DataFrame()
+df_primary_1["Topic"] = series_primary_1_topics
+df_primary_1["Count (App)"] = series_primary_1_number_of_questions_per_topic
+df_primary_1["Difficulty_1"] = series_primary_1_number_of_questions_per_topic_difficulty_1
+df_primary_1["Difficulty_2"] = series_primary_1_number_of_questions_per_topic_difficulty_2
+df_primary_1["Difficulty_3"] = series_primary_1_number_of_questions_per_topic_difficulty_3
+
+## Primary 1 : Sub-Topic Breakdown ##
+
+
+print(df_primary_1)
