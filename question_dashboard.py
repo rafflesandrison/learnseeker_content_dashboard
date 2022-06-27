@@ -335,6 +335,156 @@ data_breakdown = {
                     }
                 }
             }
+        },
+        "Primary 4": {
+            "topics": {
+                "Whole Numbers": {
+                    "question_count": 0,
+                    "difficulty_1": 0,
+                    "difficulty_2": 0,
+                    "difficulty_3": 0,
+                    "subtopics": {
+                        "Numbers Up To 100 000": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        },
+                        "Factors And Multiples": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        },
+                        "Four Operations": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        }
+                    }
+                },
+                "Fractions": {
+                    "question_count": 0,
+                    "difficulty_1": 0,
+                    "difficulty_2": 0,
+                    "difficulty_3": 0,
+                    "subtopics": {
+                        "Mixed Numbers And Improper Fractions": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        },
+                        "Fraction Of A Set Of Objects": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        },
+                        "Addition And Subtraction": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        }
+                    }
+                },
+                "Decimals": {
+                    "question_count": 0,
+                    "difficulty_1": 0,
+                    "difficulty_2": 0,
+                    "difficulty_3": 0,
+                    "subtopics": {
+                        "Decimals Up To 3 Decimal Places": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        },
+                        "Addition And Subtraction": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        },
+                        "Multiplication And Division": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        }
+                    }
+                },
+                "Measurement": {
+                    "question_count": 0,
+                    "difficulty_1": 0,
+                    "difficulty_2": 0,
+                    "difficulty_3": 0,
+                    "subtopics": {
+                        "Time": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        }
+                    }
+                },
+                "Area And Volume": {
+                    "question_count": 0,
+                    "difficulty_1": 0,
+                    "difficulty_2": 0,
+                    "difficulty_3": 0,
+                    "subtopics": {
+                        "Area And Perimeter": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        }
+                    }
+                },
+                "Geometry": {
+                    "question_count": 0,
+                    "difficulty_1": 0,
+                    "difficulty_2": 0,
+                    "difficulty_3": 0,
+                    "subtopics": {
+                        "Angles": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        },
+                        "Rectangle And Square": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        },
+                        "Line Symmetry": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        }
+                    }
+                },
+                "Data Representation And Interpretation": {
+                    "question_count": 0,
+                    "difficulty_1": 0,
+                    "difficulty_2": 0,
+                    "difficulty_3": 0,
+                    "subtopics": {
+                        "Tables And Line Graphs": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        }
+                    }
+                }
+            }
         }
     }
 }
