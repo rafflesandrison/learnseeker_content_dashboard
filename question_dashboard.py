@@ -485,6 +485,166 @@ data_breakdown = {
                     }
                 }
             }
+        },
+        "Primary 5": {
+            "topics": {
+                "Whole Numbers": {
+                    "question_count": 0,
+                    "difficulty_1": 0,
+                    "difficulty_2": 0,
+                    "difficulty_3": 0,
+                    "subtopics": {
+                        "Numbers Up To 10 Million": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        },
+                        "Four Operations": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        }
+                    }
+                },
+                "Fractions": {
+                    "question_count": 0,
+                    "difficulty_1": 0,
+                    "difficulty_2": 0,
+                    "difficulty_3": 0,
+                    "subtopics": {
+                        "Fraction And Division": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        },
+                        "Four Operations": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        }
+                    }
+                },
+                "Decimals": {
+                    "question_count": 0,
+                    "difficulty_1": 0,
+                    "difficulty_2": 0,
+                    "difficulty_3": 0,
+                    "subtopics": {
+                        "Four Operations": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        }
+                    }
+                },
+                "Percentage": {
+                    "question_count": 0,
+                    "difficulty_1": 0,
+                    "difficulty_2": 0,
+                    "difficulty_3": 0,
+                    "subtopics": {
+                        "Percentage": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        }
+                    }
+                },
+                "Ratio": {
+                    "question_count": 0,
+                    "difficulty_1": 0,
+                    "difficulty_2": 0,
+                    "difficulty_3": 0,
+                    "subtopics": {
+                        "Ratio": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        }
+                    }
+                },
+                "Rate And Speed": {
+                    "question_count": 0,
+                    "difficulty_1": 0,
+                    "difficulty_2": 0,
+                    "difficulty_3": 0,
+                    "subtopics": {
+                        "Rate": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        }
+                    }
+                },
+                "Area And Volume": {
+                    "question_count": 0,
+                    "difficulty_1": 0,
+                    "difficulty_2": 0,
+                    "difficulty_3": 0,
+                    "subtopics": {
+                        "Area Of Triangle": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        },
+                        "Volume Of Cube And Cuboid": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        }
+                    }
+                },
+                "Geometry": {
+                    "question_count": 0,
+                    "difficulty_1": 0,
+                    "difficulty_2": 0,
+                    "difficulty_3": 0,
+                    "subtopics": {
+                        "Angles": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        },
+                        "Triangle": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        },
+                        "Parallelogram, Rhombus And Trapezium": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        }
+                    }
+                },
+                "Data Analysis": {
+                    "question_count": 0,
+                    "difficulty_1": 0,
+                    "difficulty_2": 0,
+                    "difficulty_3": 0,
+                    "subtopics": {
+                        "Average Of A Set Of Data": {
+                            "question_count": 0,
+                            "difficulty_1": 0,
+                            "difficulty_2": 0,
+                            "difficulty_3": 0
+                        }
+                    }
+                }
+            }
         }
     }
 }
