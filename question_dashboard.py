@@ -19,16 +19,17 @@ with open('math_new.txt', 'r', encoding='utf-8') as math_questions:
         uuid = question["uuid"]
         question_type = question["type"]
         subject = question["subject"][0]
+        specialisation = question["specialisation"][0] if len(question["specialisation"]) > 0 else "None"
         level = question["level"][0]
         topic_name = question["topics"][0]
         subtopic_name = question["subtopics"][0] if len(question["subtopics"]) > 0 else ""
         difficultyLevel = question["difficultyLevel"][0] if len(question["difficultyLevel"]) > 0 else ""
 
         mcqs = data_breakdown[question_type]
-        
+
         # Incrementing count
         if (level == "Primary 1" or level == "Primary 2" or level == "Primary 3" or level == "Primary 4" or level == "Primary 5" or level == "Primary 6"):
-            mcq_topics = mcqs[level]["topics"]
+            mcq_topics = mcqs[level]["specialisation"][specialisation]["topics"]
             
             try:
                 if len(topic_name) > 0 and topic_name in mcq_topics:
@@ -54,6 +55,7 @@ for uuid in uuids_with_issues:
 df_master = pd.DataFrame()
 
 academic_level_list = []
+specialisation_list = []
 topic_list = []
 topic_question_count_list = []
 topic_difficulty_1_question_count_list = []
@@ -67,35 +69,38 @@ subtopic_difficulty_2_question_count_list = []
 subtopic_difficulty_3_question_count_list = []
 
 for academic_level in data_breakdown["MCQ"].keys():
-    for topic_name in data_breakdown["MCQ"][academic_level]["topics"].keys():
+    for specialisation_name in data_breakdown["MCQ"][academic_level]["specialisation"].keys():
+        for topic_name in data_breakdown["MCQ"][academic_level]["specialisation"][specialisation_name]["topics"].keys():
         
-        topic_question_count = data_breakdown["MCQ"][academic_level]["topics"][topic_name]["question_count"]
-        topic_difficulty_1_question_count = data_breakdown["MCQ"][academic_level]["topics"][topic_name]["difficulty_1"]
-        topic_difficulty_2_question_count = data_breakdown["MCQ"][academic_level]["topics"][topic_name]["difficulty_2"]
-        topic_difficulty_3_question_count = data_breakdown["MCQ"][academic_level]["topics"][topic_name]["difficulty_3"]
-        
-        for subtopic_name in data_breakdown["MCQ"][academic_level]["topics"][topic_name]["subtopics"]:
-            subtopic_question_count = data_breakdown["MCQ"][academic_level]["topics"][topic_name]["subtopics"][subtopic_name]["question_count"]
-            subtopic_difficulty_1_question_count = data_breakdown["MCQ"][academic_level]["topics"][topic_name]["subtopics"][subtopic_name]["difficulty_1"]
-            subtopic_difficulty_2_question_count = data_breakdown["MCQ"][academic_level]["topics"][topic_name]["subtopics"][subtopic_name]["difficulty_2"]
-            subtopic_difficulty_3_question_count = data_breakdown["MCQ"][academic_level]["topics"][topic_name]["subtopics"][subtopic_name]["difficulty_3"]
+            topic_question_count = data_breakdown["MCQ"][academic_level]["specialisation"][specialisation_name]["topics"][topic_name]["question_count"]
+            topic_difficulty_1_question_count = data_breakdown["MCQ"][academic_level]["specialisation"][specialisation_name]["topics"][topic_name]["difficulty_1"]
+            topic_difficulty_2_question_count = data_breakdown["MCQ"][academic_level]["specialisation"][specialisation_name]["topics"][topic_name]["difficulty_2"]
+            topic_difficulty_3_question_count = data_breakdown["MCQ"][academic_level]["specialisation"][specialisation_name]["topics"][topic_name]["difficulty_3"]
+            
+            for subtopic_name in data_breakdown["MCQ"][academic_level]["specialisation"][specialisation_name]["topics"][topic_name]["subtopics"]:
+                subtopic_question_count = data_breakdown["MCQ"][academic_level]["specialisation"][specialisation_name]["topics"][topic_name]["subtopics"][subtopic_name]["question_count"]
+                subtopic_difficulty_1_question_count = data_breakdown["MCQ"][academic_level]["specialisation"][specialisation_name]["topics"][topic_name]["subtopics"][subtopic_name]["difficulty_1"]
+                subtopic_difficulty_2_question_count = data_breakdown["MCQ"][academic_level]["specialisation"][specialisation_name]["topics"][topic_name]["subtopics"][subtopic_name]["difficulty_2"]
+                subtopic_difficulty_3_question_count = data_breakdown["MCQ"][academic_level]["specialisation"][specialisation_name]["topics"][topic_name]["subtopics"][subtopic_name]["difficulty_3"]
 
-            # TODO: Create a data-frame here that comprise of all topic and subtopics
-            academic_level_list.append(academic_level)
+                # TODO: Create a data-frame here that comprise of all topic and subtopics
+                academic_level_list.append(academic_level)
+                specialisation_list.append(specialisation_name)
 
-            topic_list.append(topic_name)
-            topic_question_count_list.append(topic_question_count)
-            topic_difficulty_1_question_count_list.append(topic_difficulty_1_question_count)
-            topic_difficulty_2_question_count_list.append(topic_difficulty_2_question_count)
-            topic_difficulty_3_question_count_list.append(topic_difficulty_3_question_count)
+                topic_list.append(topic_name)
+                topic_question_count_list.append(topic_question_count)
+                topic_difficulty_1_question_count_list.append(topic_difficulty_1_question_count)
+                topic_difficulty_2_question_count_list.append(topic_difficulty_2_question_count)
+                topic_difficulty_3_question_count_list.append(topic_difficulty_3_question_count)
 
-            subtopic_list.append(subtopic_name)
-            subtopic_question_count_list.append(subtopic_question_count)
-            subtopic_difficulty_1_question_count_list.append(subtopic_difficulty_1_question_count)
-            subtopic_difficulty_2_question_count_list.append(subtopic_difficulty_2_question_count)
-            subtopic_difficulty_3_question_count_list.append(subtopic_difficulty_3_question_count)
+                subtopic_list.append(subtopic_name)
+                subtopic_question_count_list.append(subtopic_question_count)
+                subtopic_difficulty_1_question_count_list.append(subtopic_difficulty_1_question_count)
+                subtopic_difficulty_2_question_count_list.append(subtopic_difficulty_2_question_count)
+                subtopic_difficulty_3_question_count_list.append(subtopic_difficulty_3_question_count)
 
 df_master["Academic Level"] = academic_level_list
+df_master["Specialisation"] = specialisation_list
 df_master["Topic"] = topic_list
 df_master["Topic Question Count"] = topic_question_count_list
 df_master["Topic Difficulty 1 Question Count"] = topic_difficulty_1_question_count_list
